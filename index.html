@@ -1,94 +1,178 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- EDIT: this is the tab title shown in the browser -->
-  <title>Your Name</title>
+
+  <title>CNC Supplies LLC</title>
 
   <style>
     :root {
-      --ink: #1a1a1a;
-      --muted: #6b6b6b;
-      --bg: #fbfbf9;
-      --accent: #2f6f6a;
+      --navy: #172A3A;
+      --steel: #3E6175;
+      --orange: #F28C28;
+      --light: #F2F4F5;
+      --graphite: #202426;
+      --white: #FFFFFF;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
       min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--light);
+      color: var(--graphite);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 2rem;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      padding: 40px;
+    }
+
+    .card {
+      min-height: 70vh;
+      background: var(--navy);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Industrial accent */
+    .card::after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 50%;
+      right: -180px;
+      bottom: -180px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .mark {
+      width: 18px;
+      height: 18px;
+      background: var(--orange);
+    }
+
+    .company {
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
     main {
-      max-width: 34rem;
-      width: 100%;
+      max-width: 760px;
+      position: relative;
+      z-index: 1;
     }
 
     h1 {
-      font-size: clamp(2rem, 6vw, 3rem);
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      margin: 0 0 0.75rem;
+      margin: 0 0 24px;
+      color: var(--white);
+      font-size: clamp(48px, 8vw, 96px);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      font-weight: 700;
     }
 
-    p {
-      font-size: 1.125rem;
-      color: var(--muted);
-      margin: 0 0 2rem;
+    h1 span {
+      color: var(--orange);
     }
 
-    nav {
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.15s ease;
-    }
-
-    a:hover,
-    a:focus-visible {
-      border-bottom-color: var(--accent);
+    .tagline {
+      margin: 0;
+      color: #D7E0E5;
+      font-size: clamp(24px, 3vw, 36px);
+      line-height: 1.25;
+      font-weight: 300;
     }
 
     footer {
-      margin-top: 3rem;
-      font-size: 0.875rem;
-      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 40px;
+      color: var(--steel);
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .line {
+      width: 80px;
+      height: 2px;
+      background: var(--orange);
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 15px;
+      }
+
+      .card {
+        min-height: 90vh;
+        padding: 35px;
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <main>
-    <!-- EDIT: your name or site title -->
-    <h1>Hello, I'm Your Name</h1>
 
-    <!-- EDIT: one or two lines about you or this site -->
-    <p>A short line about who you are or what this page is for.</p>
+  <div class="container">
+    <div class="card">
 
-    <!-- EDIT: your links. Delete any you don't need, or add more. -->
-    <nav>
-      <a href="mailto:you@example.com">Email</a>
-      <a href="https://github.com/harmonizedmotion" target="_blank" rel="noopener">GitHub</a>
-      <a href="#">Something else</a>
-    </nav>
+      <header>
+        <div class="mark"></div>
+        <div class="company">CNC Supplies LLC</div>
+      </header>
 
-    <!-- EDIT: optional footer -->
-    <footer>© 2026 Your Name</footer>
-  </main>
+      <main>
+        <h1>
+          We make<br>
+          things <span>possible.</span>
+        </h1>
+
+        <p class="tagline">
+          Providing customers with connections.
+        </p>
+      </main>
+
+      <footer>
+        <div class="line"></div>
+        <div>Manufacturing · Sourcing · Connections</div>
+      </footer>
+
+    </div>
+  </div>
+
 </body>
 </html>
+```
