@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- EDIT: this is the tab title shown in the browser -->
+  <title>Your Name</title>
 
+  <style>
+    :root {
+      --ink: #1a1a1a;
+      --muted: #6b6b6b;
+      --bg: #fbfbf9;
+      --accent: #2f6f6a;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    main {
+      max-width: 34rem;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 6vw, 3rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.75rem;
+    }
+
+    p {
+      font-size: 1.125rem;
+      color: var(--muted);
+      margin: 0 0 2rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s ease;
+    }
+
+    a:hover,
+    a:focus-visible {
+      border-bottom-color: var(--accent);
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <!-- EDIT: your name or site title -->
+    <h1>Hello, I'm Your Name</h1>
+
+    <!-- EDIT: one or two lines about you or this site -->
+    <p>A short line about who you are or what this page is for.</p>
+
+    <!-- EDIT: your links. Delete any you don't need, or add more. -->
+    <nav>
+      <a href="mailto:you@example.com">Email</a>
+      <a href="https://github.com/harmonizedmotion" target="_blank" rel="noopener">GitHub</a>
+      <a href="#">Something else</a>
+    </nav>
+
+    <!-- EDIT: optional footer -->
+    <footer>© 2026 Your Name</footer>
+  </main>
+</body>
+</html>
